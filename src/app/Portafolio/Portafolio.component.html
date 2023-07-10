@@ -1,0 +1,100 @@
+<!--Layout principal-->
+<div class="layout">
+    <!--Barra lateral-->
+    <aside class="layout__aside">
+
+        <section class="aside__user-info">
+            <!--Iniformacion Gerbral usuario-->
+            <div class="user-info__general">
+                <div class="user-info__container-image">
+                    <img src="/assets/img/gerardo.jpg" width="200px" class="user-info__image"
+                        alt="Foto de perfil del usuario">
+
+                </div>
+                <h2 class="user-info__name">Luis Gerardo Copalcua Aguirre</h2>
+                <h4 class="user-info__job">Desarrolladro full stack</h4>
+            </div>
+            <!--Mneí de navegacion-->
+            <!-- <nav class="user-info__menu"> -->
+            <nav class="layout__menu">
+                <ul class="menu__list">
+                    <li class="menu__option">
+                        <a [routerLink]="['/Portafolio/Presentacion']" class="menu__link">
+                            <i class="menu__icon fa-solid fa-house"></i>
+                            <span class="manu__overlay"> Home</span>
+                        </a>
+                    </li>
+                    <li class="menu__option">
+                        <a href="sobremi.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-user"></i>
+                            <span class="manu__overlay"> Sobre mi</span>
+                        </a>
+                    </li>
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                            <span class="manu__overlay"> Estudios</span>
+                        </a>
+                    </li>
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-briefcase"></i>
+                            <span class="manu__overlay"> POrtafolio</span>
+                        </a>
+                    </li>
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-book"></i>
+                            <span class="manu__overlay"> Blog</span>
+                        </a>
+                    </li>
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-envelope"></i>
+                            <span class="manu__overlay"> Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Link o redes sociales-->
+            <div class="user-info__user-links">
+                <ul class="user-links__social">
+                    <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Boton de curriculum-->
+            <div class="user-info__buttons">
+                <a href="#" class="user-info__btn">Descargar C.V.</a>
+            </div>
+
+            <!--Pie de pagina-->
+            <footer class="user-info__footer">
+                &copy; 2024 Luis Gerardo Copalcua Aguirre
+            </footer>
+
+        </section>
+
+    </aside>
+    <main class="layout__content">
+        <section class="content__page">
+            <router-outlet></router-outlet>
+        </section>
+
+    </main>
+</div>

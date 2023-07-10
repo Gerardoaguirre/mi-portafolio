@@ -11,12 +11,10 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     // canActivate: [AuthGuard]
-  }
-  // ,
-  // {
-  //   // path: 'Inicio',
-  //   // loadChildren: ()=>import('./contenidos/principal/Principal.module').then(m=>m.Contenido1Module)
-  // },
+  },{
+    path: 'Portafolio',
+    loadChildren: ()=>import('./Portafolio/Portafolio.module').then(m=>m.PortafolioModule)
+  },
 ];
 
 @NgModule({
