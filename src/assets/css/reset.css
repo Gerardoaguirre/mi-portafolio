@@ -1,0 +1,57 @@
+/**selector universal de todo el DOM*/
+*{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    
+}
+
+/*para aplicarlo a elementos donde acpliquemos el after y before*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box; /** para respetar dimensiones*/
+    -webkit-box-sizing: border-box;/**para compatibilidad con diferentes navegadores, pero es lo mismo que box-sizing*/
+    -moz-box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;/*usar el 100% de la pantalla en vertical*/
+    scroll-behavior: smooth; /*para que el scroll entre anclas sea suabizados*/
+    text-rendering: optimizeSpeed; /*rendereiza el texto un poco mas rapido*/
+    line-height: 1.5;
+}
+
+ul, ol{
+    list-style: none; /*quitarle el estilo de viñetas*/
+}
+
+a:link, a:visited, a:active {
+    display: block;/*para trabajarlos y maniupularlos com si fueran cajas*/
+    text-decoration: none;
+}
+
+    /* text-decoration:none;
+} */
+
+p a{/*para parrafos que tengas un enklace adentri*/
+    display: inline;
+}
+
+img, video, iframe,picture, figure{
+    max-width: 100%;
+    display: block;
+
+}
+
+form, input, select, textarea, button,label{
+    display: block;
+    font-family: inherit;/*esto hace que herede*/
+    font-size: inherit;
+    color: inherit;
+}

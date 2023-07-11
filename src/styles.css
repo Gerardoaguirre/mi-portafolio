@@ -1,5 +1,179 @@
-/* You can add global styles to this file, and also import other style files */
+/*DEFINICION DE VARIABLES*/
+:root{
+    --color-principal: #FFFFFF;
+    --color-segundary: #07b3df;
+    --color-background: #F2F7F9;
+    --color_transparent:  transparent;
+    
+    --color-icon: #B5B6B7;
+    --color-subtitule: #888;
+    --color-title: #222222;
+    --color-text:#555;
+
+}
+
+/*ESTILOS GENERALES*/
+html{
+    font-size: 10px;/*definion de un rem para el escalado*/
+}
 
 body{
-    font-family: "Poppins";/**Se cargan nuestras fuentes en index.html -->*/
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 1.5rem;/*viene siendo 15 px por lo que se declaro en el html ene l font sixe*/
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;/*para que no haya scroll*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-title);
+}
+
+/*IMAGEM DE FONDO*/
+body{
+    /* background: black; */
+    background-image: url("/assets/img/fondo.png");
+    background-size: cover;/*para adaptar la imagen a la pantala*/
+    background-repeat: no-repeat;
+    background-position: -20px -120px;/*para posiciones una imagen de fondo */
+}
+
+/*LAYOUT O ESTRUCTURA PRINCIPAL*/
+
+.layout{
+    position: relative;/*para que se comprote la caja cpompleta*/
+    min-width: 1290px; /*anchura minia*/
+    width: 75%;
+    height: 80vh;/*con respecto a la pantalla 80%*/
+    min-height: 80vh;
+    margin: 10vh auto; /*para central el contendio pero con 10hv le esto mentiendo margen para centrarlo vertical y horixontsl*/
+
+    display: grid;
+    grid-template-areas: 
+                        "aside content";
+    grid-template-columns: 30% 70%;
+
+
+    /* border: 1px solid red; */
+
+    /*sombre destras del layout*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px -5px rgb(0, 0, 0, 0.25);/*100 pixeles de difuminado y en X y Y en cero con opaciodad del 25% el sombreado*/
+    /*overflow: hidden;par que el contenido no se salga por si hay iamgenes esquinadas y sobre salen de la caja q*/ /*lo comentamos porque en body acomodamos la imgen al tamaño de l apantala*/
+}
+
+/*BARRA LATELRA AZUL*/
+
+.layout__aside{
+    grid-area: aside;
+
+    border-radius: 4rem 0 0 4rem;
+    overflow: auto;/*por si llega a aver un scroll cuando la pagina se haga mas peqpue*/
+    overflow-x: hidden; /*todo lo que sobresalga de una caja lo oculta ,  va a ser ocultado (o se adatpta a la caja (grid))*/ /*como en el la etiqueta .layout*/
+
+}
+
+.aside__user-info{
+    display: flex; /*para que se posicionen al lado*/
+    flex-direction: column; /*pero esto ahce que se hagan uno abajo de otro  */
+    align-items: center;/*ya que los enlaces los estamos manejando como cajas*/
+    text-align: center;
+
+    min-height: 100%;/*para que ocupe el 100% de la caja en vertical*/
+    min-width: 30rem;
+
+    background-color: var(--color-segundary);
+    color: var(--color-principal);
+}
+a{
+    color: var(--color-principal);
+}
+
+
+.user-info__container-image{
+    position: relative;
+    display: inline-block;/*para que funcione como bloque*/
+    width: 18rem;
+    margin-top: 7rem;
+    z-index: 1;/*esto es capa uno*/
+    /* overflow: hidden;todo lo que sobresalga de una caja lo oculta */
+}
+
+.user-info__image{
+    width: 100%;
+    background-color: var(--color-principal);/**/
+    border: 3px solid var(--color-principal);
+    border-radius: 20rem;
+}
+
+/*todo lo estetico debe ser creado con css que no sea coentenido de la pagina web*/
+/*se le llama seudoelementos visuales*/
+.user-info__container-image::after{/*para agregar un hijo despues de la iamgen*/
+    content: "";
+    position: absolute;/*para que no haga uso del pagina*/
+    top: 5%;
+    left: 9%;
+    z-index: -1;/*esto ahce qie se posiciones detras de la caja que tienen 1 */
+    border-radius: 30rem;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-repeating-radial-gradient(center center,#fff,#fff 1px, transparent 0px, transparent 100% );/*para hacer degradados*/
+    background-size: 0.6rem 0.6rem;
+    border-radius: 30rem;
+    opacity: 0.4;
+}
+
+.user-info__name{
+    font-size: 3.2rem;
+    color: var(--color-principal);
+    margin-top: 2.6rem;
+
+}
+
+.user-info__job{
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: var(--color-principal);
+}
+
+.layout__menu{
+    display: none;
+}
+
+.user-info__links{
+    margin-bottom: 3.6rem;
+}
+
+.links__social{
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;/*para que funcione como fila*/
+
+
+}
+
+.social__option{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;/*parar alinearlos*/
+    opacity: 0.9;
+    border-radius: 3rem;
+    /* transition: all 300ms linear;a todas la propiedades le aplica la transcion */
+    transition: all 300ms ease-in-out;/*a todas la propiedades le aplica la transcion*/
+}
+
+.social__option:hover{
+    opacity: 1;
+    background-color: rgb(255, 255, 255, 0.20);
+
+}
+
+/*CONTENEDOR PRINCIPAL*/
+
+.layout__content{
+    grid-area: content;
 }

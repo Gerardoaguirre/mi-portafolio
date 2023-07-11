@@ -11,7 +11,6 @@ export class PortafolioComponent implements OnInit {
 
   }
     ngOnInit(): void {
-        console.log("Iniciamos el componente Flexbox y reedirigimos")
-        this.router.navigate(["/Flexbox/maquetacion1"])
+        console.log("Iniciamos el componente Flexbox y reedirigimos");
     }
 }
