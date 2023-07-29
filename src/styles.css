@@ -172,8 +172,51 @@ a{
 
 }
 
+.user-info__buttons{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.user-info__btn{
+    padding: 3rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 3.2rem;
+    color: var(--color-principal);
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .22); /*difuminado*/
+    transition: all 300ms ease-in-out; /**/
+}
+
+.user-info__btn:hover{
+    background-color: var(--color-principal);
+    color: var(--color-segundary);
+}
+
+.user-info__footer{
+    position: absolute;
+    bottom: 2rem;  /**para que se quede fijo sin importar el tamaño de la apgina**/
+    font-size: 1.2rem;
+}
+
 /*CONTENEDOR PRINCIPAL*/
 
 .layout__content{
     grid-area: content;
+    height: 100%;/*Parar que siempre tenga el mismo tamaña*/
+    min-height: 100%;/*lo mismo*/
+    background-color: var(--color-segundary);/*lo ponemos de azul todo el fondo como el primero grid*/
+    border-radius: 0  10rem 10rem 0;
 }
+
+.content__page{
+    min-height: 100%; /*que ocupe todo el espacip*/
+    background-color: var(--color-principal); /*lo ponemos blanco*/
+    border-radius: 10rem; /*damos bordeado*/
+
+    display: flex;/*para organizar el contendio de dentro con flexibilidad*/
+    flex-direction: column; /*para tener los flex en columna*/
+    align-items: center; /*verticalmente al centel*/
+    justify-content: center;/*horizonralmente al centro*/
+}
+
