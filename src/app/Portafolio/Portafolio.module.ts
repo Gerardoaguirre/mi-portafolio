@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { PortafolioComponent } from './Portafolio.component';
 import { Presentancioncomponent } from './pagina/Presentancion.component';
 import { PortafolioRoutingModule } from './Portafolio-routing.module';
+import { SobreMicomponent } from './pagina/SobreMi.component';
 
 // import { AppRoutingModule } from './app-routing.module';
 
@@ -11,7 +12,8 @@ import { PortafolioRoutingModule } from './Portafolio-routing.module';
   declarations: [
     // FooterComponent
     PortafolioComponent,
-    Presentancioncomponent
+    Presentancioncomponent,
+    SobreMicomponent
   ],
   imports: [
     // BrowserModule,

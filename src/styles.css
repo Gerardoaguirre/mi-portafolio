@@ -138,9 +138,7 @@ a{
     color: var(--color-principal);
 }
 
-.layout__menu{
-    display: none;
-}
+
 
 .user-info__links{
     margin-bottom: 3.6rem;
@@ -205,18 +203,85 @@ a{
     grid-area: content;
     height: 100%;/*Parar que siempre tenga el mismo tamaña*/
     min-height: 100%;/*lo mismo*/
-    background-color: var(--color-segundary);/*lo ponemos de azul todo el fondo como el primero grid*/
+    background-color: var(--color-segundary);/*lo ponemos de azul todo el fondo como el primero grid, esto será el fondo del routing*/
     border-radius: 0  10rem 10rem 0;
 }
 
 .content__page{
     min-height: 100%; /*que ocupe todo el espacip*/
-    background-color: var(--color-principal); /*lo ponemos blanco*/
-    border-radius: 10rem; /*damos bordeado*/
-
+    background-color: var(--color-principal); /*lo ponemos blanco, para sopbre ponerl del layout__content y que se vea unico con el ide__user-info*/
+    border-radius: 3rem; /*damos bordeado*/
+    
     display: flex;/*para organizar el contendio de dentro con flexibilidad*/
     flex-direction: column; /*para tener los flex en columna*/
     align-items: center; /*verticalmente al centel*/
     justify-content: center;/*horizonralmente al centro*/
 }
 
+
+/*MEMU NAVEGACION LATERAL*/
+.layout__menu{
+    /* display: none; esto lo oculta */
+    display: block; /*aunque no se ponga ya viene default*/
+    position: absolute;/*para posicicionarlo donde queramos*/
+    top: 0;
+    right: -105px;
+    min-width: 11rem;
+
+    background-color: var(--color_transparent);
+}
+
+.menu__list{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+
+    background-color: var(--color-principal);
+    width: 60%;
+    min-height: 32rem;
+    padding: 2rem 0; /*los premero toma el paddign de arriba y abajo y els egundo numero el de los laods*/
+    margin-left: 2.5rem;
+    box-shadow: 0 0 3rem -0.5rem rgb(0, 0, 0, 0.15);
+    border-radius: 6rem;
+}
+
+.menu__icon{
+    color: var(--color-icon);
+    font-size: 2.8rem;
+
+}
+
+.menu__option{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.menu__option:hover .menu__icon{/*cuando pasemos el mouse, que cambie el color de menu__icon que esta dentro de menu__option*/
+    color: var(--color-segundary);
+    transition: all 300ms ease-in-out;
+}
+
+.menu__overlay{
+    position: absolute; /*para posicicionarlo donde queramos y ya darle formato*/
+    right: 0;
+    margin-top: -3rem;/* debemos posicionarlo jussto en los iconos, para despues ocultar el texto detras*/
+    display: block;/*para que se vea, aunque no se ponga ya va por default en todo*/
+    opacity: 0;/*que no se vea, y con la animancion de abajo, que cambie y aparexca*/
+    padding: 0.5rem 1rem;
+    display: block;
+    color: black;
+    background-color: var(--color-segundary);
+    white-space: nowrap;/*para que no haya salto de linea en los texto*/
+    transition: all 300ms ease-in-out;
+}
+
+.menu__option:hover .menu__overlay{
+    opacity: 1;
+    right: 100%;/*posicion a la izquiera*/
+}

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
 import { PortafolioComponent,  } from './Portafolio.component';
 import { Presentancioncomponent } from './pagina/Presentancion.component';
+import { SobreMicomponent } from './pagina/SobreMi.component';
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
     component: PortafolioComponent, //componente padre
     // canActivate:[AuthGuard],
     children: [
-      { path: 'Presentacion', component : Presentancioncomponent }
+      { path: 'Presentacion', component : Presentancioncomponent },
+      { path: 'SobreMi', component : SobreMicomponent}
     ]
   }
 ];
