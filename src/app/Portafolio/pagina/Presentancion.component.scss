@@ -14,7 +14,7 @@
 
 .info__general{
 
-    display: flex;/*para organizar el contendio de dentro con flexibilidad*/
+    display: flex !important;/*para organizar el contendio de dentro con flexibilidad*/
     flex-direction: column; /*para tener los flex en columna*/
     align-items: center; /*verticalmente al centel*/
     justify-content: center;/*horizonralmente al centro*/

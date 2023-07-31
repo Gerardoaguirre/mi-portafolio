@@ -87,9 +87,6 @@ body{
     background-color: var(--color-segundary);
     color: var(--color-principal);
 }
-a{
-    color: var(--color-principal);
-}
 
 
 .user-info__container-image{
@@ -175,6 +172,14 @@ a{
     margin-bottom: 4rem;
 }
 
+.social__link{
+    color: var(--color-principal);
+}
+
+/* a{
+    
+} */
+
 .user-info__btn{
     padding: 3rem;
     padding-top: 1.3rem;
@@ -208,6 +213,7 @@ a{
 }
 
 .content__page{
+    height: 100%;
     min-height: 100%; /*que ocupe todo el espacip*/
     background-color: var(--color-principal); /*lo ponemos blanco, para sopbre ponerl del layout__content y que se vea unico con el ide__user-info*/
     border-radius: 3rem; /*damos bordeado*/
@@ -216,6 +222,7 @@ a{
     flex-direction: column; /*para tener los flex en columna*/
     align-items: center; /*verticalmente al centel*/
     justify-content: center;/*horizonralmente al centro*/
+
 }
 
 
@@ -285,3 +292,4 @@ a{
     opacity: 1;
     right: 100%;/*posicion a la izquiera*/
 }
+

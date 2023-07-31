@@ -1,4 +1,9 @@
 /*DEFINICION DE VARIABLES*/
+:host {
+    display: block;
+    overflow: auto ; /*para poner el scroll*/ 
+  }
+
 :root{
     --color-principal: #FFFFFF;
     --color-segundary: #07b3df;
@@ -12,25 +17,20 @@
 
 }
 
-.info__general{
-
-    display: flex;/*para organizar el contendio de dentro con flexibilidad*/
-    flex-direction: column; /*para tener los flex en columna*/
-    align-items: center; /*verticalmente al centel*/
-    justify-content: center;/*horizonralmente al centro*/
+.content__about{
+    // display: block ;
+    height: 100%;
+    min-height: 100%;
+    padding: 6rem;
+    padding-right: 3rem; 
+    // overflow: auto ; /*para poner el scroll , pero no lo tomó aqui, asi que lo puse mas afuera*/
     
-    
 }
 
-.page__name{
-    font-size: 6rem;
-    margin-bottom: 1rem;
+// a{
+//     color:var(--color-text);
+// }
 
-}
-
-.page__job{
-    font-size: 2.1rem;
-    font-weight: lighter;
-    color: var(--color-subtitule);
-    justify-content: center;
-}
+// .prices__buy{
+//     color: var(--color-text);
+// }
