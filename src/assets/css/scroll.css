@@ -1,0 +1,54 @@
+
+/**
+SCROLL PARA CHROME
+*/
+
+:root{
+    --color-scrollbar : #D3D3D4;
+    --color-background-scrollbar: #eee;
+}
+
+.content__about{
+ /* Asegura que el contenido del div sea visible y el scroll esté habilitado */
+ overflow: auto;
+
+
+ }
+
+ 
+.content__about::-webkit-scrollbar{
+    width: 25px;
+    background-color: transparent;
+    /* background: gray;olo par ver los bordes y lo estolso */ 
+}
+
+.content__about::-webkit-scrollbar-thumb{
+    /* border: 10px solid red;solo par ver los bordes y lo estolso */
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 40px;
+}
+
+.content__about:hover::-webkit-scrollbar-thumb{ /*para que cuando posicione el mouse dentro del div se vea el scroll*/
+    box-shadow: inset 0 0 0 10px var(--color-scrollbar) ;
+}
+
+.content__about:hover::-webkit-scrollbar-thumb:hover{ /*para que cuando seleccionemos el scroll cambie de color y se haga mas ancho*/
+    border: 8px solid transparent;
+    box-shadow: inset 0 0 0 10px blue ;
+}
+
+.content__about::-webkit-scrollbar-track{ /*para mover toda la barra y acortarlar*/
+    /* background-color: blue; */
+    background-color: transparent;
+    margin: 40px 0;
+}
+
+/**
+SCROLL PARA FIREFOX
+*/
+
+.content__about{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) transparent;/*el color del scrool y el color del div del scroll*/
+}
