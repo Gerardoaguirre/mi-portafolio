@@ -1,12 +1,23 @@
 
+
+/*DEFINICION DE VARIABLES*/
+:root{
+    --color-principal: #FFFFFF;
+    --color-segundary: #07b3df;
+    --color-background: #F2F7F9;
+    --color_transparent:  transparent;
+    
+    --color-icon: #B5B6B7;
+    --color-subtitule: #888;
+    --color-title: #222222;
+    --color-text:#555;
+    --color-scrollbar : #D3D3D4;
+    --color-background-scrollbar: #eee;
+
+}
 /**
 SCROLL PARA CHROME
 */
-
-:root{
-    --color-scrollbar : #D3D3D4;
-    --color-background-scrollbar: #eee;
-}
 
 .content__about{
  /* Asegura que el contenido del div sea visible y el scroll esté habilitado */
@@ -38,7 +49,7 @@ SCROLL PARA CHROME
     box-shadow: inset 0 0 0 10px blue ;
 }
 
-.content__about::-webkit-scrollbar-track{ /*para mover toda la barra y acortarlar*/
+.content__about::-webkit-scrollbar-track{ /*para mover toda la barra y acortarlar en lo alto*/
     /* background-color: blue; */
     background-color: transparent;
     margin: 40px 0;
@@ -51,4 +62,41 @@ SCROLL PARA FIREFOX
 .content__about{
     scrollbar-width: thin;
     scrollbar-color: var(--color-scrollbar) transparent;/*el color del scrool y el color del div del scroll*/
+}
+
+
+/*SCROL DE LA BARRA LATERRAL*/
+   
+    
+   .layout__aside::-webkit-scrollbar{
+       width: 25px;
+       /* background-color: transparent; */
+       background: var(--color-segundary);/*para ponder el color de la barra del color del fonode y no se vea*/ 
+   }
+   
+   .layout__aside::-webkit-scrollbar-thumb{
+       /* border: 10px solid red;solo par ver los bordes y lo estolso */
+       border: 10px solid transparent;
+       box-shadow: none;
+       border-radius: 40px;
+   }
+   
+   .layout__aside:hover::-webkit-scrollbar-thumb{ /*para que cuando posicione el mouse dentro del div se vea el scroll*/
+       box-shadow: inset 0 0 0 10px var(--color-principal) ;
+   }
+   
+   .layout__aside:hover::-webkit-scrollbar-thumb:hover{ /*para que cuando seleccionemos el scroll cambie de color y se haga mas ancho*/
+       border: 8px solid transparent;
+       box-shadow: inset 0 0 0 10px var(--color-principal) ;
+   }
+   
+   .layout__aside::-webkit-scrollbar-track{ /*para mover toda la barra y acortarlar en lo alto*/
+       /* background-color: blue; */
+       background-color: transparent;
+       margin: 40px 0;
+   }
+/*SCROL DE LA BARRA LATERRAL EN FIREFOX*/
+   .layout__aside{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) var(--color-segundary);/*el color del scrool y el color del div del scroll*/
 }
